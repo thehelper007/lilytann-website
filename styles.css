@@ -373,8 +373,9 @@ em, .italic {
   bottom: -40px;
   left: -40px;
   font-family: var(--f-script);
+  font-weight: 300;
   font-size: clamp(3.5rem, 8vw, 7rem);
-  color: var(--terracotta);
+  color: #5E85B5;
   transform: rotate(-6deg);
   pointer-events: none;
   opacity: 0.92;
