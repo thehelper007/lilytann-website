@@ -366,7 +366,6 @@ em, .italic {
   height: 100%;
   min-height: 520px;
   object-fit: cover;
-  filter: sepia(0.18) contrast(1.02) saturate(0.9);
   box-shadow: 0 30px 60px -20px rgba(43,31,20,0.35);
 }
 .hero-script {
@@ -447,7 +446,6 @@ em, .italic {
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: 50% 18%;
-  filter: grayscale(0.25) sepia(0.12) contrast(1.04);
   box-shadow: 0 20px 50px -20px rgba(43,31,20,0.3);
 }
 .about-handwritten {
