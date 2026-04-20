@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" fill="none" aria-label="Лилия Тан">
+  <style>
+    .sig { font-family: 'Caveat', 'Dancing Script', cursive; font-size: 48px; font-weight: 500; fill: currentColor; }
+    .sig-under { stroke: currentColor; stroke-width: 1.2; fill: none; stroke-linecap: round; }
+  </style>
+  <text class="sig" x="6" y="62">Лилия Тан</text>
+  <path class="sig-under" d="M12 78 C 62 74, 142 82, 248 76" opacity="0.55"/>
+</svg>

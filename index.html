@@ -1,480 +1,456 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лілія Тан — Психолог | Консультації онлайн</title>
-  <meta name="description" content="Лілія Тан — практикуючий психолог. Гештальт-підхід, тіньова робота, тілесність. Онлайн-консультації для дорослих. 1350+ сесій, 125+ клієнтів.">
+  <title data-i18n="meta.title">Лилия Тан — Психолог | Онлайн-консультации</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="">
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.title" content="">
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.description" content="">
+  <meta property="og:image" content="/images/hero-main.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52' font-family='Caveat,cursive'%3EЛТ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/main-BKe8hEDi.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-Ca43rTWR.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,700&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#top" class="nav-logo">Лілія Тан</a>
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="Liliya Tann">
+        <img id="navSignature" src="images/signature-ru.svg" alt="Лилия Тан" width="180" height="56">
+      </a>
+
       <div class="nav-links" id="navLinks">
-        <a href="#about">Про мене</a>
-        <a href="#topics">Запити</a>
-        <a href="#pricing">Ціни</a>
-        <a href="#reviews">Відгуки</a>
-        <a href="#faq">Питання</a>
-        <a href="#contact" class="nav-cta">Записатись</a>
+        <a href="#about" data-i18n="nav.about">Обо мне</a>
+        <a href="#topics" data-i18n="nav.topics">Запросы</a>
+        <a href="#pricing" data-i18n="nav.pricing">Цены</a>
+        <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+        <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+        <a href="#contact" class="nav-cta" data-i18n="nav.cta">Записаться</a>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
+
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="uk">UK</button>
+          <span class="lang-sep">·</span>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <span class="lang-sep">·</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div class="hero-content">
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
         <div class="hero-badges">
-          <span class="badge">Онлайн</span>
-          <span class="badge">Укр / Рус</span>
+          <span class="badge" data-i18n="hero.badge.online">Онлайн</span>
+          <span class="badge" data-i18n="hero.badge.langs">Укр · Рус · Англ</span>
         </div>
-        <div class="hero-subtitle">Практикуючий психолог</div>
-        <h1 class="hero-name">Лілія Тан</h1>
-        <p class="hero-desc">Для тих, хто може справлятись сам — але хоче інакше, глибше, разом</p>
-        <div class="hero-topics">
-          <span>тривожність</span>
-          <span>вигорання</span>
-          <span>стосунки</span>
-          <span>самооцінка</span>
-          <span>пошук себе</span>
+        <div class="eyebrow" data-i18n="hero.eyebrow">Практикующий психолог</div>
+        <h1 class="hero-name"><span data-i18n="hero.name">Лилия Тан</span></h1>
+        <p class="hero-tagline" data-i18n="hero.tagline">Для тех, кто умеет справляться сам — но хочет иначе, глубже, вместе</p>
+        <a href="https://calendly.com/liliyatann/book_me_session" target="_blank" rel="noopener" class="btn-primary" data-i18n="hero.cta">Познакомиться — бесплатно</a>
+        <div class="hero-trust" data-i18n="hero.trust">1350+ сессий · 125+ клиентов · 3+ года практики</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img src="images/hero-main.webp" alt="Лилия Тан" class="hero-img" loading="eager">
+          <span class="hero-script" data-i18n="hero.handwritten">узнавать себя</span>
         </div>
-        <a href="https://calendly.com/liliyatann/book_me_session?month=2025-06" target="_blank" class="cta-primary">Познайомитись — безкоштовно</a>
-        <div class="hero-trust">1350+ сесій &middot; 125+ клієнтів &middot; Перша зустріч 30 хв — безкоштовно</div>
       </div>
-      <div class="hero-images">
-        <img src="/hero-main.webp" alt="Лілія Тан — психолог" class="hero-img-main">
-      </div>
+    </div>
+  </header>
+
+  <!-- MANIFESTO (espresso) -->
+  <section class="manifesto" aria-label="Manifesto">
+    <div class="manifesto-inner reveal">
+      <p class="manifesto-body">
+        <span class="mf-pre" data-i18n="manifesto.pre">Здесь</span>
+        <em class="mf-em" data-i18n="manifesto.line1">успех</em>
+        <span data-i18n="manifesto.line2">ощущается как</span>
+        <em class="mf-em" data-i18n="manifesto.line3">покой</em>,<br>
+        <span data-i18n="manifesto.line4">а работа над собой —</span>
+        <em class="mf-em" data-i18n="manifesto.line5">как возвращение домой.</em>
+      </p>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- (01) ABOUT -->
   <section class="section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">(01)</span>
-        <div class="section-line"></div>
-        <span class="section-label">Знайомство</span>
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="about.num">(01)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="about.label">Знакомство</span>
       </div>
-      <h2 style="margin-bottom: 48px;">Про мене</h2>
+      <h2 class="sec-title reveal" data-i18n="about.title">Обо мне</h2>
+
       <div class="about-grid reveal">
-        <div class="about-text">
-          <p>Мене звати Лілія Тан. Я практикуючий психолог.</p>
-          <p>Я працюю з дорослими, які вміють триматись, але більше не хочуть.</p>
-          <p>Мені важлива глибина, справжність і повага до внутрішнього шляху кожного.</p>
-          <p>На сесіях я не "лікую" — я слухаю, питаю, тримаю простір, у якому народжується відповідь.</p>
-          <p>Використовую гештальт-підхід, КПТ, тіньову роботу, тілесність, емоційне розпізнавання та інтегративні методи.</p>
-          <p>Працюю онлайн з клієнтами з України, Європи та всього світу. Сесії українською або російською — як вам зручніше.</p>
+        <div class="about-portrait">
+          <img src="images/hero-main.webp" alt="Лилия Тан" loading="lazy" class="about-portrait-img">
+          <img src="images/handwritten.webp" alt="" class="about-handwritten" loading="lazy" aria-hidden="true">
         </div>
-        <div>
-          <div class="about-quote">
-            "Терапія — це не про те, щоб стати іншою людиною. Це про те, щоб нарешті зустрітись із собою."
-          </div>
-          <div class="about-methods">
-            <h3 style="margin-bottom: 16px; font-size: 1.1rem;">Мої методи</h3>
-            <div class="method-tags">
-              <span>Гештальт</span>
-              <span>КПТ</span>
-              <span>Тіньова робота</span>
-              <span>Тілесність</span>
-              <span>Інтегративний підхід</span>
-            </div>
-          </div>
+        <div class="about-copy">
+          <p data-i18n="about.p1">Меня зовут Лилия Тан. Я практикующий психолог.</p>
+          <p data-i18n="about.p2">Я работаю со взрослыми, которые умеют держаться — но больше не хотят.</p>
+          <p data-i18n="about.p3">Мне важна глубина, подлинность и уважение к внутреннему пути каждого.</p>
+          <p data-i18n="about.p4">На сессиях я не «лечу» — я слушаю, спрашиваю, держу пространство, в котором рождается ответ.</p>
+          <p data-i18n="about.p5">Работаю онлайн с клиентами из Украины, Европы и всего мира.</p>
+
+          <blockquote class="about-quote">
+            <span data-i18n="about.quote">Терапия — не о том, чтобы стать другим человеком. Она о том, чтобы наконец встретиться с собой.</span>
+          </blockquote>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
-  <section class="section" style="padding-top: 0;">
+  <!-- (02) TOPICS -->
+  <section class="section section-soft" id="topics">
     <div class="container">
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="topics.num">(02)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="topics.label">С чем я работаю</span>
+      </div>
+      <h2 class="sec-title reveal" data-i18n="topics.title">Ваш запрос</h2>
+
+      <div class="bento">
+        <article class="bento-card reveal">
+          <span class="bento-num">01</span>
+          <h3 data-i18n="topics.1.title">Тревожность</h3>
+          <p data-i18n="topics.1.text">Постоянное напряжение, страхи, панические атаки.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="bento-num">02</span>
+          <h3 data-i18n="topics.2.title">Выгорание</h3>
+          <p data-i18n="topics.2.text">Эмоциональное истощение, потеря мотивации, пустота.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="bento-num">03</span>
+          <h3 data-i18n="topics.3.title">Отношения</h3>
+          <p data-i18n="topics.3.text">Кризисы в паре, токсичные паттерны, сложности с близостью.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="bento-num">04</span>
+          <h3 data-i18n="topics.4.title">Самооценка</h3>
+          <p data-i18n="topics.4.text">Синдром самозванца, сравнение, обесценивание себя.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="bento-num">05</span>
+          <h3 data-i18n="topics.5.title">Поиск себя</h3>
+          <p data-i18n="topics.5.text">Кризис идентичности, потеря смысла, переходные периоды.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="bento-num">06</span>
+          <h3 data-i18n="topics.6.title">Адаптация за границей</h3>
+          <p data-i18n="topics.6.text">Одиночество в эмиграции, культурный шок, потеря опоры.</p>
+        </article>
+      </div>
+
+      <div class="center-cta reveal">
+        <a href="https://calendly.com/liliyatann/book_me_session" target="_blank" rel="noopener" class="btn-primary" data-i18n="topics.cta">Обсудить ваш запрос</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- (03) STATS -->
+  <section class="section stats" aria-label="Stats">
+    <div class="container stats-container">
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="stats.num">(03)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="stats.label">Моя работа в цифрах</span>
+      </div>
+      <h2 class="sec-title sec-title-xl reveal" data-i18n="stats.title">Факты в числах</h2>
+
       <div class="stats-grid reveal">
-        <div>
-          <div class="stat-number">1350+</div>
-          <div class="stat-label">Сесій проведено</div>
+        <div class="stat">
+          <div class="stat-num" data-i18n="stats.n1">1350+</div>
+          <div class="stat-rule"></div>
+          <div class="stat-label" data-i18n="stats.l1">Сессий проведено</div>
         </div>
-        <div>
-          <div class="stat-number">125+</div>
-          <div class="stat-label">Клієнтів досягли цілі</div>
+        <div class="stat">
+          <div class="stat-num" data-i18n="stats.n2">125+</div>
+          <div class="stat-rule"></div>
+          <div class="stat-label" data-i18n="stats.l2">Клиентов достигли цели</div>
         </div>
-        <div>
-          <div class="stat-number">5</div>
-          <div class="stat-label">Спеціалізацій та сертифікацій</div>
+        <div class="stat">
+          <div class="stat-num" data-i18n="stats.n3">3+</div>
+          <div class="stat-rule"></div>
+          <div class="stat-label" data-i18n="stats.l3">Года ежедневной практики</div>
         </div>
+      </div>
+
+      <div class="stamp" aria-hidden="true">
+        <img src="images/stamp.svg" alt="">
       </div>
     </div>
   </section>
 
-  <!-- TOPICS -->
-  <section class="section" id="topics">
+  <!-- (04) APPROACH (espresso) -->
+  <section class="section dark" id="approach">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">(02)</span>
-        <div class="section-line"></div>
-        <span class="section-label">З чим я працюю</span>
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="approach.num">(04)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="approach.label">Мой подход</span>
       </div>
-      <h2 style="margin-bottom: 48px;">Ваш запит</h2>
-      <div class="topics-grid reveal">
-        <div class="topic-card">
-          <div class="topic-icon">01</div>
-          <h3>Тривожність</h3>
-          <p>Постійне напруження, страхи, панічні атаки, відчуття що щось не так</p>
-        </div>
-        <div class="topic-card">
-          <div class="topic-icon">02</div>
-          <h3>Вигорання</h3>
-          <p>Емоційне виснаження, втрата мотивації, відчуття порожнечі від роботи чи життя</p>
-        </div>
-        <div class="topic-card">
-          <div class="topic-icon">03</div>
-          <h3>Стосунки</h3>
-          <p>Кризи в парі, токсичні патерни, складнощі з близькістю, розлучення</p>
-        </div>
-        <div class="topic-card">
-          <div class="topic-icon">04</div>
-          <h3>Самооцінка</h3>
-          <p>Невпевненість, синдром самозванця, порівняння з іншими, знецінення себе</p>
-        </div>
-        <div class="topic-card">
-          <div class="topic-icon">05</div>
-          <h3>Пошук себе</h3>
-          <p>Криза ідентичності, втрата сенсу, перехідні періоди, "хто я без ролей?"</p>
-        </div>
-        <div class="topic-card">
-          <div class="topic-icon">06</div>
-          <h3>Адаптація за кордоном</h3>
-          <p>Самотність в еміграції, культурний шок, втрата опори, пошук себе в новому контексті</p>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 48px;">
-        <a href="https://calendly.com/liliyatann/book_me_session?month=2025-06" target="_blank" class="cta-primary">Обговорити ваш запит</a>
-      </div>
+      <h2 class="sec-title reveal" data-i18n="approach.title">Пять ключей, с которыми я работаю</h2>
+
+      <ol class="approach-list">
+        <li class="approach-item reveal">
+          <span class="app-idx">01 —</span>
+          <em class="app-name" data-i18n="approach.1.name">Гештальт</em>
+          <p class="app-text" data-i18n="approach.1.text">О том, что происходит прямо сейчас — в теле, в голосе, в паузе между словами.</p>
+        </li>
+        <li class="approach-item reveal">
+          <span class="app-idx">02 —</span>
+          <em class="app-name" data-i18n="approach.2.name">КПТ</em>
+          <p class="app-text" data-i18n="approach.2.text">О мыслях, которые работают против вас — и о том, как выбрать их иначе.</p>
+        </li>
+        <li class="approach-item reveal">
+          <span class="app-idx">03 —</span>
+          <em class="app-name" data-i18n="approach.3.name">Теневая работа</em>
+          <p class="app-text" data-i18n="approach.3.text">О тех частях себя, которых вы стеснялись — и которые оказываются силой.</p>
+        </li>
+        <li class="approach-item reveal">
+          <span class="app-idx">04 —</span>
+          <em class="app-name" data-i18n="approach.4.name">Телесность</em>
+          <p class="app-text" data-i18n="approach.4.text">Потому что тело знает раньше, чем голова успевает сформулировать.</p>
+        </li>
+        <li class="approach-item reveal">
+          <span class="app-idx">05 —</span>
+          <em class="app-name" data-i18n="approach.5.name">Интегративный подход</em>
+          <p class="app-text" data-i18n="approach.5.text">Без догм. Выбираю из каждого метода то, что работает именно под ваш запрос.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-num">(03)</span>
-        <div class="section-line"></div>
-        <span class="section-label">Інвестиція в себе</span>
-      </div>
-      <h2 style="margin-bottom: 48px;">Ціни</h2>
-      <div class="pricing-cards reveal">
-        <div class="price-card">
-          <div class="price-label">Знайомство</div>
-          <h3>Перша зустріч</h3>
-          <div class="price-amount">Безкоштовно</div>
-          <div class="price-detail">30 хвилин</div>
-          <p>Ми знайомимось, обговорюємо ваш запит, ви ставите питання. Без тиску і зобов'язань.</p>
-          <a href="https://calendly.com/liliyatann/book_me_session?month=2025-06" target="_blank" class="cta-primary">Записатись</a>
-        </div>
-        <div class="price-card featured">
-          <div class="price-label">Основний формат</div>
-          <h3>Індивідуальна сесія</h3>
-          <div class="price-amount">від 2500 ₴</div>
-          <div class="price-detail">60 хвилин · онлайн</div>
-          <p>Повноцінна терапевтична сесія. Гештальт, КПТ, тілесність — залежно від вашого запиту.</p>
-          <a href="https://calendly.com/liliyatann/book_me_session?month=2025-06" target="_blank" class="cta-primary">Записатись</a>
-        </div>
-        <div class="price-card">
-          <div class="price-label">Вигідно</div>
-          <h3>Пакет 4 сесії</h3>
-          <div class="price-amount">від 8500 ₴</div>
-          <div class="price-detail">Економія 15%</div>
-          <p>Для тих, хто готовий до регулярної роботи. Стабільний ритм дає найкращі результати.</p>
-          <a href="https://calendly.com/liliyatann/book_me_session?month=2025-06" target="_blank" class="cta-primary">Записатись</a>
-        </div>
-      </div>
-      <p class="pricing-note">Оплата можлива в UAH, EUR або USD. Для клієнтів за кордоном — зручний спосіб оплати обговорюємо індивідуально.</p>
-    </div>
-  </section>
-
-  <!-- PRINCIPLES -->
-  <section class="section" id="principles">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-num">(04)</span>
-        <div class="section-line"></div>
-        <span class="section-label">Як я працюю</span>
-      </div>
-      <h2 style="margin-bottom: 48px;">Мої принципи</h2>
-      <div class="principles-list reveal">
-        <div class="principle-item">
-          <div class="principle-num">01</div>
-          <div>
-            <h3>Науково-доказовий підхід</h3>
-            <p>Всі методи які я використовую базуються на науково-доказових методологіях. Найважливіше — я практично перевірила кожен метод на сотнях сесій і використовую лише те, що дало найкращі результати.</p>
-          </div>
-        </div>
-        <div class="principle-item">
-          <div class="principle-num">02</div>
-          <div>
-            <h3>Безпечний простір</h3>
-            <p>Сесія — це місце, де не треба бути сильною, правильною чи зручною. Тут можна говорити все, мовчати, плакати, сумніватись. Я тримаю простір — без оцінки, без тиску.</p>
-          </div>
-        </div>
-        <div class="principle-item">
-          <div class="principle-num">03</div>
-          <div>
-            <h3>Конфіденційність</h3>
-            <p>Все, що відбувається на сесії — залишається між нами. Я дотримуюсь етичного кодексу і гарантую повну конфіденційність. Ваша довіра — основа нашої роботи.</p>
-          </div>
-        </div>
-        <div class="principle-item">
-          <div class="principle-num">04</div>
-          <div>
-            <h3>Індивідуальний підхід</h3>
-            <p>Немає універсальних рецептів. Кожна людина — окремий всесвіт. Я адаптую методи під конкретну ситуацію, темп і потреби кожного клієнта.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section" id="education">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-num">(05)</span>
-        <div class="section-line"></div>
-        <span class="section-label">Кваліфікація</span>
-      </div>
-      <h2 style="margin-bottom: 48px;">Освіта</h2>
-      <div class="edu-timeline reveal">
-        <div class="edu-item">
-          <div class="edu-year">2022</div>
-          <div class="edu-desc">Університет освітньої медицини УОМ, спеціалізація "Інтегративний психолог"</div>
-          <img src="/edu1.webp" alt="" class="edu-img">
-        </div>
-        <div class="edu-item">
-          <div class="edu-year">2023</div>
-          <div class="edu-desc">Канадська академія мета-когнітивного програмування — сертифікація за напрямком "Експоненційний коуч"</div>
-          <img src="/edu2.webp" alt="" class="edu-img">
-        </div>
-        <div class="edu-item">
-          <div class="edu-year">2024</div>
-          <div class="edu-desc">Практичний авторський курс клінічного психолога А. Копилова</div>
-          <img src="/edu3.webp" alt="" class="edu-img">
-        </div>
-        <div class="edu-item">
-          <div class="edu-year">2024</div>
-          <div class="edu-desc">Український Інститут когнітивно-поведінкової терапії — річна програма за спеціалізацією "КПТ+"</div>
-          <img src="/edu4.webp" alt="" class="edu-img">
-        </div>
-        <div class="edu-item">
-          <div class="edu-year">2024</div>
-          <div class="edu-desc">Київський національний лінгвістичний університет — магістр психології, факультет "Практичної психології"</div>
-          <img src="/edu1.webp" alt="" class="edu-img">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
+  <!-- (05) STEPS -->
   <section class="section" id="howit">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">(06)</span>
-        <div class="section-line"></div>
-        <span class="section-label">Крок за кроком</span>
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="steps.num">(05)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="steps.label">Шаг за шагом</span>
       </div>
-      <h2 style="margin-bottom: 48px;">Як це працює</h2>
-      <div class="steps-grid reveal">
-        <div class="step-item">
+      <h2 class="sec-title reveal" data-i18n="steps.title">Как это работает</h2>
+
+      <div class="steps">
+        <div class="step reveal">
           <div class="step-num">01</div>
-          <div class="step-title">Перший контакт</div>
-          <p class="step-text">Ви робите запис через сайт, і на першій сесії ми коротко обговорюємо ваш запит.</p>
+          <div class="step-title" data-i18n="steps.1.t">Первый контакт</div>
+          <p data-i18n="steps.1.d">Вы записываетесь через сайт, и мы договариваемся о первой встрече.</p>
         </div>
-        <div class="step-item">
+        <div class="step reveal">
           <div class="step-num">02</div>
-          <div class="step-title">Знайомча сесія</div>
-          <p class="step-text">Безкоштовна 30-хвилинна зустріч, де ми знайомимось, ви ставите питання, і ми вирішуємо, чи підходимо одне одному.</p>
+          <div class="step-title" data-i18n="steps.2.t">Знакомство</div>
+          <p data-i18n="steps.2.d">Бесплатная 30-минутная встреча. Вы задаёте вопросы, мы выбираем, подходим ли друг другу.</p>
         </div>
-        <div class="step-item">
+        <div class="step reveal">
           <div class="step-num">03</div>
-          <div class="step-title">Робочі сесії</div>
-          <p class="step-text">Регулярні зустрічі раз на тиждень по 60 хвилин онлайн. Ми працюємо з вашим запитом у безпечному темпі.</p>
+          <div class="step-title" data-i18n="steps.3.t">Рабочие сессии</div>
+          <p data-i18n="steps.3.d">Регулярные встречи раз в неделю по 60 минут онлайн.</p>
         </div>
-        <div class="step-item">
+        <div class="step reveal">
           <div class="step-num">04</div>
-          <div class="step-title">Результат</div>
-          <p class="step-text">Ви відчуваєте зміни: ясність, спокій, краще розуміння себе. Ви вирішуєте — продовжити чи завершити терапію.</p>
+          <div class="step-title" data-i18n="steps.4.t">Результат</div>
+          <p data-i18n="steps.4.d">Ясность, покой, лучшее понимание себя. Вы решаете — продолжить или завершить.</p>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 48px;">
-        <a href="https://calendly.com/liliyatann/book_me_session?month=2025-06" target="_blank" class="cta-primary">Познайомитись</a>
+
+      <div class="center-cta reveal">
+        <a href="https://calendly.com/liliyatann/book_me_session" target="_blank" rel="noopener" class="btn-primary" data-i18n="steps.cta">Познакомиться</a>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="section" id="reviews">
+  <!-- (06) PRINCIPLES -->
+  <section class="section section-soft" id="principles">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">(07)</span>
-        <div class="section-line"></div>
-        <span class="section-label">Відгуки клієнтів</span>
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="principles.num">(06)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="principles.label">Как я держу пространство</span>
       </div>
-      <h2 style="margin-bottom: 48px;">Відгуки</h2>
-      <div class="reviews-grid reveal">
-        <div class="review-card">
-          <p class="review-text">"Лілія створює такий простір, де можна нарешті зняти маску. Після кількох сесій я вперше за роки відчула, що дихаю повними грудьми."</p>
-          <div class="review-author">Олена, 34 · Київ · тривожність</div>
+      <h2 class="sec-title reveal" data-i18n="principles.title">Мои принципы</h2>
+
+      <div class="principles">
+        <div class="principle reveal">
+          <div class="p-num">01</div>
+          <h3 data-i18n="principles.1.t">Научно-доказательный подход</h3>
+          <p data-i18n="principles.1.d">Методы, которые я использую, проверены и практикой, и исследованиями. Без эзотерики — с уважением к науке и к вам.</p>
         </div>
-        <div class="review-card">
-          <p class="review-text">"Я прийшов зі скептицизмом, але Лілія не намагалась мене переконати. Вона просто слухала. І саме це дало мені більше, ніж будь-яка порада."</p>
-          <div class="review-author">Андрій, 41 · Львів · кризис рішень</div>
+        <div class="principle reveal">
+          <div class="p-num">02</div>
+          <h3 data-i18n="principles.2.t">Безопасное пространство</h3>
+          <p data-i18n="principles.2.d">Сессия — место, где не нужно быть сильной, правильной или удобной. Здесь можно молчать, плакать, сомневаться.</p>
         </div>
-        <div class="review-card">
-          <p class="review-text">"Мені було важко говорити про свої почуття. З Лілією це стало можливим. Вона не тисне, не поспішає — просто тримає простір."</p>
-          <div class="review-author">Марина, 28 · Варшава · самооцінка</div>
+        <div class="principle reveal">
+          <div class="p-num">03</div>
+          <h3 data-i18n="principles.3.t">Конфиденциальность</h3>
+          <p data-i18n="principles.3.d">Всё, что происходит между нами — остаётся между нами. Этический кодекс соблюдаю беспрекословно.</p>
         </div>
-        <div class="review-card">
-          <p class="review-text">"Терапія з Лілією допомогла мені побачити патерни, які я повторювала роками. Нарешті я роблю вибір усвідомлено, а не автоматично."</p>
-          <div class="review-author">Катерина, 37 · Київ · стосунки</div>
-        </div>
-        <div class="review-card">
-          <p class="review-text">"Після переїзду в Берлін я загубила себе. Лілія допомогла мені знайти опору всередині, коли зовні все було чужим. Дуже вдячна."</p>
-          <div class="review-author">Юлія, 31 · Берлін · адаптація</div>
-        </div>
-        <div class="review-card">
-          <p class="review-text">"Я вигорів на роботі і не розумів як далі. За 8 сесій з Лілією я знову відчув сенс і зробив зміни, про які мріяв два роки."</p>
-          <div class="review-author">Дмитро, 35 · Дніпро · вигорання</div>
-        </div>
-        <div class="review-card">
-          <p class="review-text">"Я боялась йти до психолога — думала, це визнання слабкості. Лілія показала, що це найсміливіше, що я зробила для себе."</p>
-          <div class="review-author">Анна, 44 · Одеса · перший досвід терапії</div>
-        </div>
-        <div class="review-card">
-          <p class="review-text">"Лілія працює дуже делікатно, але точно. Іноді одне її питання розкриває те, що я ховала від себе роками. Рекомендую щиро."</p>
-          <div class="review-author">Ірина, 29 · Прага · пошук себе</div>
+        <div class="principle reveal">
+          <div class="p-num">04</div>
+          <h3 data-i18n="principles.4.t">Индивидуальный подход</h3>
+          <p data-i18n="principles.4.d">Универсальных рецептов не бывает. Я адаптирую методы под темп и потребности каждого.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section" id="faq">
+  <!-- (07) EDUCATION -->
+  <section class="section" id="education">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">(08)</span>
-        <div class="section-line"></div>
-        <span class="section-label">FAQ</span>
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="edu.num">(07)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="edu.label">Квалификация</span>
       </div>
-      <h2 style="margin-bottom: 48px;">Питання</h2>
-      <div class="faq-list reveal">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Як проходить перша сесія?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Перша зустріч — знайомча, 30 хвилин, безкоштовно. Ми обговорюємо ваш запит, я розповідаю як працюю, і ви вирішуєте чи хочете продовжити. Без тиску і зобов'язань.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Чи працюєте ви онлайн?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Так, всі сесії проходять онлайн через Zoom або Google Meet. Це зручно, безпечно і не менш ефективно ніж очні зустрічі. Ви можете бути в будь-якій точці світу.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>На якій мові проходять сесії?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Працюю українською та російською — на тій мові, яка вам зручніша. Мова сесії може змінюватись по ходу роботи, головне — ваш комфорт.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Скільки сесій потрібно для результату?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Це залежить від запиту. Деякі питання розкриваються за 5-8 сесій, глибша робота може тривати кілька місяців. Ми обговорюємо це разом і ви завжди контролюєте процес.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>З якими запитами ви працюєте?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Тривожність, стосунки, самооцінка, вигорання, кризи ідентичності, прийняття рішень, емоційне виснаження, робота з тінню, пошук себе, адаптація за кордоном. Якщо ваш запит не в цьому списку — напишіть, обговоримо.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Як оплатити з-за кордону?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Оплата можлива в гривнях, євро або доларах. Для клієнтів за кордоном підбираємо зручний спосіб оплати індивідуально — PayPal, переказ, або інші варіанти.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Чи це конфіденційно?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Абсолютно. Все, що ви говорите на сесії — залишається між нами. Я дотримуюсь етичного кодексу психолога. Ваша приватність — це святе.</p>
-          </div>
-        </div>
+      <h2 class="sec-title reveal" data-i18n="edu.title">Образование</h2>
+
+      <ul class="edu-timeline">
+        <li class="edu reveal">
+          <span class="edu-y" data-i18n="edu.1.y">2022</span>
+          <span class="edu-d" data-i18n="edu.1.d">Университет образовательной медицины УОМ — специализация «Интегративный психолог».</span>
+        </li>
+        <li class="edu reveal">
+          <span class="edu-y" data-i18n="edu.2.y">2023</span>
+          <span class="edu-d" data-i18n="edu.2.d">Канадская академия мета-когнитивного программирования — сертификация «Экспоненциальный коуч».</span>
+        </li>
+        <li class="edu reveal">
+          <span class="edu-y" data-i18n="edu.3.y">2024</span>
+          <span class="edu-d" data-i18n="edu.3.d">Практический авторский курс клинического психолога А. Копылова.</span>
+        </li>
+        <li class="edu reveal">
+          <span class="edu-y" data-i18n="edu.4.y">2024</span>
+          <span class="edu-d" data-i18n="edu.4.d">Украинский институт когнитивно-поведенческой терапии — годовая программа «КПТ+».</span>
+        </li>
+        <li class="edu reveal">
+          <span class="edu-y" data-i18n="edu.5.y">2024</span>
+          <span class="edu-d" data-i18n="edu.5.d">Киевский национальный лингвистический университет — магистр психологии.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- (08) REVIEWS -->
+  <section class="section dark" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="reviews.num">(08)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="reviews.label">Отзывы клиентов</span>
+      </div>
+      <h2 class="sec-title reveal" data-i18n="reviews.title">Что говорят люди</h2>
+
+      <div class="reviews">
+        <figure class="review reveal"><blockquote data-i18n="reviews.1.q">Лилия создаёт такое пространство, где можно наконец снять маску.</blockquote><figcaption data-i18n="reviews.1.a">Елена, 34 · Киев · тревожность</figcaption></figure>
+        <figure class="review reveal"><blockquote data-i18n="reviews.2.q">Я пришёл со скептицизмом, но Лилия не пыталась меня переубедить.</blockquote><figcaption data-i18n="reviews.2.a">Андрей, 41 · Львов · кризис решений</figcaption></figure>
+        <figure class="review reveal"><blockquote data-i18n="reviews.3.q">Мне было трудно говорить о своих чувствах. С Лилией это стало возможным.</blockquote><figcaption data-i18n="reviews.3.a">Марина, 28 · Варшава · самооценка</figcaption></figure>
+        <figure class="review reveal"><blockquote data-i18n="reviews.4.q">Терапия с Лилией помогла мне увидеть паттерны, которые я повторяла годами.</blockquote><figcaption data-i18n="reviews.4.a">Екатерина, 37 · Киев · отношения</figcaption></figure>
+        <figure class="review reveal"><blockquote data-i18n="reviews.5.q">После переезда в Берлин я потеряла себя. Лилия помогла мне найти опору внутри.</blockquote><figcaption data-i18n="reviews.5.a">Юлия, 31 · Берлин · адаптация</figcaption></figure>
+        <figure class="review reveal"><blockquote data-i18n="reviews.6.q">Я выгорел на работе и не понимал как дальше. За 8 сессий я снова почувствовал смысл.</blockquote><figcaption data-i18n="reviews.6.a">Дмитрий, 35 · Днепр · выгорание</figcaption></figure>
+        <figure class="review reveal"><blockquote data-i18n="reviews.7.q">Я боялась идти к психологу — думала, это признание слабости.</blockquote><figcaption data-i18n="reviews.7.a">Анна, 44 · Одесса · первый опыт</figcaption></figure>
+        <figure class="review reveal"><blockquote data-i18n="reviews.8.q">Лилия работает очень деликатно, но точно. Одно её вопрос раскрывает то, что я прятала.</blockquote><figcaption data-i18n="reviews.8.a">Ирина, 29 · Прага · поиск себя</figcaption></figure>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTS -->
-  <section class="section" id="contact">
+  <!-- (09) PRICING -->
+  <section class="section" id="pricing">
     <div class="container">
-      <div class="section-header">
-        <span class="section-num">(09)</span>
-        <div class="section-line"></div>
-        <span class="section-label">Напишіть мені</span>
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="pricing.num">(09)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="pricing.label">Инвестиция в себя</span>
       </div>
-      <h2 style="margin-bottom: 48px;">Контакти</h2>
-      <div class="contact-grid reveal">
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Ваше ім'я" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="E-mail" required>
-          </div>
-          <div class="form-group">
-            <textarea name="message" placeholder="Ваше повідомлення..."></textarea>
-          </div>
-          <button type="submit" class="cta-primary" style="border: none; cursor: pointer;">Надіслати</button>
-        </form>
-        <div>
-          <div class="contact-socials">
-            <a href="https://www.instagram.com/liliya.tann" target="_blank" class="contact-social-link">Instagram</a>
-            <a href="https://t.me/liliyatann" target="_blank" class="contact-social-link">Telegram</a>
-            <a href="https://youtube.com/@liliya_tann" target="_blank" class="contact-social-link">YouTube</a>
-            <a href="mailto:liliyatann@gmail.com" class="contact-social-link">liliyatann@gmail.com</a>
-          </div>
-          <div style="margin-top: 40px;">
-            <a href="https://calendly.com/liliyatann/book_me_session?month=2025-06" target="_blank" class="cta-primary" style="display: inline-flex;">Записатись на зустріч</a>
-          </div>
-        </div>
+      <h2 class="sec-title reveal" data-i18n="pricing.title">Цены</h2>
+
+      <div class="pricing">
+        <article class="price-card reveal">
+          <div class="price-tag" data-i18n="pricing.1.tag">Знакомство</div>
+          <h3 data-i18n="pricing.1.t">Первая встреча</h3>
+          <div class="price-amount" data-i18n="pricing.1.price">Бесплатно</div>
+          <div class="price-detail" data-i18n="pricing.1.d">30 минут</div>
+          <p data-i18n="pricing.1.text">Мы знакомимся, обсуждаем ваш запрос, вы задаёте вопросы.</p>
+          <a href="https://calendly.com/liliyatann/book_me_session" target="_blank" rel="noopener" class="btn-primary btn-sm" data-i18n="pricing.1.cta">Записаться</a>
+        </article>
+        <article class="price-card featured reveal">
+          <div class="price-tag" data-i18n="pricing.2.tag">Основной формат</div>
+          <h3 data-i18n="pricing.2.t">Индивидуальная сессия</h3>
+          <div class="price-amount" data-i18n="pricing.2.price">от 2500 ₴</div>
+          <div class="price-detail" data-i18n="pricing.2.d">60 минут · онлайн</div>
+          <p data-i18n="pricing.2.text">Полноценная терапевтическая сессия под ваш запрос.</p>
+          <a href="https://calendly.com/liliyatann/book_me_session" target="_blank" rel="noopener" class="btn-primary btn-sm" data-i18n="pricing.2.cta">Записаться</a>
+        </article>
+        <article class="price-card reveal">
+          <div class="price-tag" data-i18n="pricing.3.tag">Выгодно</div>
+          <h3 data-i18n="pricing.3.t">Пакет 4 сессии</h3>
+          <div class="price-amount" data-i18n="pricing.3.price">от 8500 ₴</div>
+          <div class="price-detail" data-i18n="pricing.3.d">Экономия 15%</div>
+          <p data-i18n="pricing.3.text">Для тех, кто готов к регулярной работе.</p>
+          <a href="https://calendly.com/liliyatann/book_me_session" target="_blank" rel="noopener" class="btn-primary btn-sm" data-i18n="pricing.3.cta">Записаться</a>
+        </article>
+      </div>
+
+      <p class="pricing-note reveal" data-i18n="pricing.note">Оплата возможна в UAH, EUR или USD. Для клиентов за границей удобный способ обсуждаем индивидуально.</p>
+    </div>
+  </section>
+
+  <!-- (10) FAQ -->
+  <section class="section section-soft" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="faq.num">(10)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="faq.label">FAQ</span>
+      </div>
+      <h2 class="sec-title reveal" data-i18n="faq.title">Вопросы</h2>
+
+      <div class="faq">
+        <details class="faq-item reveal"><summary><span data-i18n="faq.1.q">Как проходит первая сессия?</span><span class="faq-icon">+</span></summary><p data-i18n="faq.1.a"></p></details>
+        <details class="faq-item reveal"><summary><span data-i18n="faq.2.q">Вы работаете онлайн?</span><span class="faq-icon">+</span></summary><p data-i18n="faq.2.a"></p></details>
+        <details class="faq-item reveal"><summary><span data-i18n="faq.3.q">На каком языке проходят сессии?</span><span class="faq-icon">+</span></summary><p data-i18n="faq.3.a"></p></details>
+        <details class="faq-item reveal"><summary><span data-i18n="faq.4.q">Сколько сессий нужно для результата?</span><span class="faq-icon">+</span></summary><p data-i18n="faq.4.a"></p></details>
+        <details class="faq-item reveal"><summary><span data-i18n="faq.5.q">С какими запросами вы работаете?</span><span class="faq-icon">+</span></summary><p data-i18n="faq.5.a"></p></details>
+        <details class="faq-item reveal"><summary><span data-i18n="faq.6.q">Как оплатить из-за границы?</span><span class="faq-icon">+</span></summary><p data-i18n="faq.6.a"></p></details>
+        <details class="faq-item reveal"><summary><span data-i18n="faq.7.q">Это конфиденциально?</span><span class="faq-icon">+</span></summary><p data-i18n="faq.7.a"></p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- (11) CONTACT (espresso) -->
+  <section class="contact-cta dark" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="sec-num" data-i18n="contact.num">(11)</span>
+        <span class="sec-line"></span>
+        <span class="sec-label" data-i18n="contact.label">Напишите мне</span>
+      </div>
+      <h2 class="contact-title reveal" data-i18n="contact.title">Начнём</h2>
+      <p class="contact-lead reveal" data-i18n="contact.lead">Первый шаг — 30 минут знакомства, без обязательств. Дальше решаете вы.</p>
+      <div class="contact-actions reveal">
+        <a href="https://calendly.com/liliyatann/book_me_session" target="_blank" rel="noopener" class="btn-primary btn-lg" data-i18n="contact.cta">Записаться на знакомство</a>
+      </div>
+      <p class="contact-or reveal" data-i18n="contact.or">или напишите напрямую:</p>
+      <div class="contact-links reveal">
+        <a href="https://www.instagram.com/liliya.tann" target="_blank" rel="noopener" data-i18n="contact.ig">Instagram</a>
+        <a href="https://t.me/liliyatann" target="_blank" rel="noopener" data-i18n="contact.tg">Telegram</a>
+        <a href="https://youtube.com/@liliya_tann" target="_blank" rel="noopener" data-i18n="contact.yt">YouTube</a>
+        <a href="mailto:liliyatann@gmail.com" data-i18n="contact.mail">liliyatann@gmail.com</a>
       </div>
     </div>
   </section>
@@ -482,11 +458,12 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <span>&copy; 2025 Лілія Тан · Психолог</span>
-      <span>Онлайн · Укр / Рус</span>
-      <a href="#top">На початок</a>
+      <span data-i18n="footer.rights">© 2026 Лилия Тан · Практикующий психолог</span>
+      <span data-i18n="footer.location">Онлайн · Укр · Рус · Англ</span>
+      <a href="#top" data-i18n="footer.top">К началу</a>
     </div>
   </footer>
 
+  <script type="module" src="main.js"></script>
 </body>
 </html>
