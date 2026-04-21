@@ -33,7 +33,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 
 body {
   font-family: var(--f-body);
@@ -355,8 +355,9 @@ em, .italic {
 }
 .hero-img-wrap {
   position: relative;
-  height: 100%;
+  width: 100%;
   min-height: 520px;
+  display: block;
 }
 .hero-img {
   width: 100%;
@@ -366,18 +367,18 @@ em, .italic {
   box-shadow: 0 30px 60px -20px rgba(43,31,20,0.35);
 }
 .hero-script {
-  position: absolute;
-  bottom: -40px;
-  left: -40px;
+  display: block;
+  margin-top: 18px;
+  padding: 0 4px;
   font-family: var(--f-script);
   font-weight: 400;
-  font-size: clamp(3rem, 7vw, 6rem);
-  color: #9EB9D8;
-  transform: rotate(-6deg);
-  pointer-events: none;
-  opacity: 0.7;
-  white-space: nowrap;
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  color: #B4CBE6;
+  opacity: 0.9;
   letter-spacing: 0.01em;
+  line-height: 1;
+  text-align: right;
+  white-space: normal;
 }
 
 /* ---------- Manifesto ---------- */
@@ -439,6 +440,9 @@ em, .italic {
 }
 .about-portrait {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 .about-portrait-img {
   width: 100%;
@@ -448,15 +452,12 @@ em, .italic {
   box-shadow: 0 20px 50px -20px rgba(43,31,20,0.3);
 }
 .about-handwritten {
-  position: absolute;
-  right: -18%;
-  bottom: -4%;
+  display: block;
   width: 60%;
-  max-width: 300px;
-  opacity: 0.55;
-  mix-blend-mode: multiply;
+  max-width: 280px;
+  margin: 16px 0 0 auto;
+  opacity: 0.75;
   pointer-events: none;
-  transform: rotate(-3deg);
 }
 .about-copy p {
   font-family: var(--f-display);
@@ -651,6 +652,19 @@ em, .italic {
   color: var(--olive);
   opacity: 0.85;
 }
+.manifesto-stamp {
+  position: absolute;
+  top: clamp(36px, 7vw, 80px);
+  right: clamp(24px, 5vw, 90px);
+  width: clamp(120px, 13vw, 180px);
+  height: clamp(120px, 13vw, 180px);
+  pointer-events: none;
+  animation: spin-slow 40s linear infinite;
+  color: var(--cream);
+  opacity: 0.55;
+  z-index: 1;
+}
+.manifesto-stamp img { width: 100%; height: 100%; }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 
 /* ---------- Approach ---------- */
@@ -1151,7 +1165,8 @@ em, .italic {
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .stamp { animation: none; }
+  .stamp,
+  .manifesto-stamp { animation: none; }
   .ticker-track { animation: none; }
   .hero-img-wrap { transform: none; }
 }
@@ -1194,8 +1209,8 @@ em, .italic {
   .hero-visual { min-height: 380px; }
   .hero-img, .hero-img-wrap { min-height: 380px; }
   .hero-script {
-    font-size: clamp(3rem, 12vw, 5rem);
-    bottom: -30px; left: -15px;
+    font-size: clamp(2rem, 9vw, 3rem);
+    margin-top: 14px;
   }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
