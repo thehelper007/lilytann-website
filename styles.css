@@ -800,7 +800,9 @@ em, .italic {
 }
 .ticker-track {
   display: flex;
-  gap: 28px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 38px;
   width: max-content;
   align-items: stretch;
   animation: ticker-scroll 140s linear infinite;
@@ -1221,8 +1223,14 @@ em, .italic {
   .steps { grid-template-columns: 1fr; gap: 40px; }
 
   .reviews { grid-template-columns: 1fr; }
-  .ticker-item { height: 340px; }
-  .ticker-track { gap: 18px; animation-duration: 100s; }
+  .ticker-item { height: 320px; flex: 0 0 auto; }
+  .ticker-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 32px;
+    animation-duration: 90s;
+  }
 
   .pricing { grid-template-columns: 1fr; }
 
