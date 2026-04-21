@@ -785,6 +785,46 @@ em, .italic {
 }
 
 /* ---------- Reviews ---------- */
+.reviews-title {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--cream);
+}
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  margin-top: clamp(40px, 5vw, 64px);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.ticker-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  align-items: stretch;
+  animation: ticker-scroll 140s linear infinite;
+  will-change: transform;
+}
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker-item {
+  flex: 0 0 auto;
+  margin: 0;
+  height: 440px;
+  display: block;
+}
+.ticker-item img {
+  height: 100%;
+  width: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 20px 50px -25px rgba(0,0,0,0.55);
+  background: var(--cream);
+}
+@keyframes ticker-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
 .reviews {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1110,6 +1150,7 @@ em, .italic {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .stamp { animation: none; }
+  .ticker-track { animation: none; }
   .hero-img-wrap { transform: none; }
 }
 
@@ -1180,6 +1221,8 @@ em, .italic {
   .steps { grid-template-columns: 1fr; gap: 40px; }
 
   .reviews { grid-template-columns: 1fr; }
+  .ticker-item { height: 340px; }
+  .ticker-track { gap: 18px; animation-duration: 100s; }
 
   .pricing { grid-template-columns: 1fr; }
 

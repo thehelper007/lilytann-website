@@ -152,8 +152,8 @@ export const TRANSLATIONS = {
     "edu.5.d": "Київський національний лінгвістичний університет — магістр психології.",
 
     "reviews.num": "(08)",
-    "reviews.label": "Відгуки клієнтів",
-    "reviews.title": "Що говорять люди",
+    "reviews.label": "Що говорять клієнти після терапії",
+    "reviews.title": "ВІДГУКИ",
     "reviews.1.q": "Лілія створює такий простір, де можна нарешті зняти маску. Після кількох сесій я вперше за роки відчула, що дихаю повними грудьми.",
     "reviews.1.a": "Олена, 34 · Київ · тривожність",
     "reviews.2.q": "Я прийшов зі скептицизмом, але Лілія не намагалась мене переконати. Вона просто слухала. І саме це дало мені більше, ніж будь-яка порада.",
@@ -384,8 +384,8 @@ export const TRANSLATIONS = {
     "edu.5.d": "Киевский национальный лингвистический университет — магистр психологии.",
 
     "reviews.num": "(08)",
-    "reviews.label": "Отзывы клиентов",
-    "reviews.title": "Что говорят люди",
+    "reviews.label": "Что говорят клиенты после терапии",
+    "reviews.title": "ОТЗЫВЫ",
     "reviews.1.q": "Лилия создаёт такое пространство, где можно наконец снять маску. После нескольких сессий я впервые за годы почувствовала, что дышу полной грудью.",
     "reviews.1.a": "Елена, 34 · Киев · тревожность",
     "reviews.2.q": "Я пришёл со скептицизмом, но Лилия не пыталась меня переубедить. Она просто слушала. И именно это дало мне больше, чем любой совет.",
@@ -616,8 +616,8 @@ export const TRANSLATIONS = {
     "edu.5.d": "Kyiv National Linguistic University — Master's in Psychology.",
 
     "reviews.num": "(08)",
-    "reviews.label": "Client reviews",
-    "reviews.title": "What people say",
+    "reviews.label": "What clients say after therapy",
+    "reviews.title": "REVIEWS",
     "reviews.1.q": "Liliya creates a space where you can finally take the mask off. After a few sessions I felt, for the first time in years, that I could breathe fully.",
     "reviews.1.a": "Olena, 34 · Kyiv · anxiety",
     "reviews.2.q": "I came in sceptical, but Liliya didn't try to convince me of anything. She just listened. And that gave me more than any advice could have.",
