@@ -44,7 +44,9 @@ body {
   overflow-x: hidden;
 }
 
-img { display: block; max-width: 100%; height: auto; }
+img, video { display: block; max-width: 100%; height: auto; }
+/* элементы сетки не должны раздуваться под собственный размер контента */
+*, *::before, *::after { min-width: 0; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
 ::selection { background: var(--pink); color: #000; }
@@ -230,11 +232,12 @@ a.freebadge:hover { background: var(--pink); color: #000; }
 
 /* ---------- Промо-видео ---------- */
 
-/* Вертикальный ролик: занимает колонку целиком, кадр не обрезается */
-.hero__media { width: 100%; max-width: 430px; margin-inline: auto; }
+/* Горизонтальный ролик — компактный, по центру, никогда не шире колонки */
+.hero__media { width: 100%; max-width: 400px; min-width: 0; margin-inline: auto; }
 .promo__video {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   background: #000;
 }
@@ -453,15 +456,7 @@ a.freebadge:hover { background: var(--pink); color: #000; }
 }
 
 @media (min-width: 861px) {
-  /* вертикальный кадр — узкая колонка справа, текст и программа слева */
-  .hero__grid {
-    grid-template-columns: 1fr minmax(300px, 400px);
-    grid-template-rows: auto auto;
-    align-items: start;
-    column-gap: clamp(30px, 5vw, 64px);
-  }
-  .hero__grid > div:first-child { grid-column: 1; grid-row: 1; }
-  .hero__media { grid-column: 2; grid-row: 1 / span 2; align-self: center; max-width: 400px; }
-  .hero__prog { grid-column: 1; grid-row: 2; margin-top: clamp(18px, 3vw, 30px); }
+  /* одна вертикальная колонка на любой ширине */
+  .hero__grid { grid-template-columns: 1fr; gap: clamp(24px, 4vw, 40px); }
   .hero__prog h3 { margin-bottom: 14px; }
 }
