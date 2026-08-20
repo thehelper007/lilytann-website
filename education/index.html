@@ -88,10 +88,14 @@
         <p class="hero__from">от магистра психологии</p>
       </div>
 
-      <div class="hero__posters">
-        <img src="/education/img/poster-0109.webp" width="648" height="964" alt="Постер Online Get Together 01.09" fetchpriority="high" decoding="async">
-        <img src="/education/img/poster-0808.webp" width="540" height="764" alt="" aria-hidden="true" loading="lazy" decoding="async">
-        <img src="/education/img/poster-0109.webp" width="648" height="964" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <div class="hero__media">
+        <video class="promo__video" id="promoVideo"
+               autoplay loop muted playsinline preload="auto"
+               width="848" height="480"
+               poster="/education/img/promo-poster.webp"
+               aria-label="Самоуважение — практический менторинг-интенсив">
+          <source src="/education/video/promo.mp4" type="video/mp4">
+        </video>
       </div>
 
       <div class="hero__prog">
@@ -110,18 +114,6 @@
     </div>
   </div>
 </header>
-
-<!-- ============ ПРОМО-ВИДЕО (зациклено, без звука) ============ -->
-<section class="promo">
-  <div class="wrap">
-    <video class="promo__video" id="promoVideo"
-           autoplay loop muted playsinline preload="metadata"
-           poster="/education/img/promo-poster.webp"
-           aria-label="Самоуважение — практический менторинг-интенсив">
-      <source src="/education/video/promo.mp4" type="video/mp4">
-    </video>
-  </div>
-</section>
 
 <hr class="rule">
 
