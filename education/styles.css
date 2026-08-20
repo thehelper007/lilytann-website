@@ -181,7 +181,9 @@ section.tight { padding: clamp(36px, 7vw, 70px) 0; }
   letter-spacing: .12em;
   font-size: clamp(.7rem, 2.6vw, .82rem);
   padding: 8px 16px;
+  transition: background .25s var(--ease), color .25s var(--ease);
 }
+a.freebadge:hover { background: var(--pink); color: #000; }
 
 /* ---------- Hero ---------- */
 
