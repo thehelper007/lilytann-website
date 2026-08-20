@@ -493,21 +493,34 @@ a.freebadge:hover { background: var(--pink); color: #000; }
   .hero__prog h3 { margin-bottom: 14px; }
 }
 
+
+/* ---------- Манифест: крупное заявление посреди страницы ---------- */
+.manifesto { padding: clamp(66px, 14vw, 150px) 0; }
+.manifesto__text {
+  font-family: var(--f-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+  line-height: 1.07;
+  color: var(--white);
+  font-size: clamp(2rem, 8.6vw, 5.6rem);
+  text-wrap: balance;
+}
+.manifesto__text span { display: block; }
+.manifesto__text .manifesto__hot { color: var(--pink); margin-top: .18em; }
+
 /* ============================================================
    Анимация
    ============================================================ */
 
-/* Заголовки рубрик проявляются «шторкой» снизу вверх */
-.has-js h2.reveal,
-.has-js .heavy.reveal,
-.has-js .script.reveal,
-.has-js .script-lat.reveal { clip-path: inset(0 0 110% 0); }
-.has-js h2.reveal.is-in,
-.has-js .heavy.reveal.is-in,
-.has-js .script.reveal.is-in,
-.has-js .script-lat.reveal.is-in {
+/* Заголовки рубрик проявляются «шторкой» снизу вверх.
+   Клип висит на внутреннем слое .wipe, а не на самом .reveal: у элемента
+   с clip-path нулевая площадь пересечения, и IntersectionObserver
+   никогда бы его не заметил (в Chrome заголовок так и остался бы невидимым). */
+.has-js .wipe { display: block; clip-path: inset(0 0 110% 0); }
+.has-js .reveal.is-in .wipe {
   clip-path: inset(0 0 -25% 0);
-  transition: opacity .9s var(--ease), transform .9s var(--ease), clip-path 1.15s var(--ease);
+  transition: clip-path 1.15s var(--ease);
 }
 
 /* Розовая звезда медленно вращается */
@@ -561,8 +574,7 @@ a.freebadge:hover { background: var(--pink); color: #000; }
 
 @media (prefers-reduced-motion: reduce) {
   .spark, .meet__bg, .bleed__bg { animation: none; }
-  .has-js h2.reveal, .has-js .heavy.reveal,
-  .has-js .script.reveal, .has-js .script-lat.reveal { clip-path: none; }
+  .has-js .wipe { clip-path: none; transition: none; }
   .timing__row::after { transform: scaleX(1); transition: none; }
   .btn::after { display: none; }
   .card:hover, .method__list li:hover { transform: none; }

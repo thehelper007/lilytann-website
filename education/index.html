@@ -21,8 +21,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Marck+Script&family=Pinyon+Script&family=Archivo+Black&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/education/styles.css?v=15">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Marck+Script&family=Pinyon+Script&family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/education/styles.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -140,6 +140,16 @@
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ МАНИФЕСТ ============ -->
+<section class="manifesto">
+  <div class="wrap">
+    <p class="manifesto__text">
+      <span class="reveal">Если ты давно ощущаешь, что можешь и хочешь больше —</span>
+      <span class="reveal manifesto__hot">здесь мы найдём как</span>
+    </p>
   </div>
 </section>
 
@@ -544,6 +554,20 @@ document.documentElement.classList.add('has-js');
     v.controls = true;
     v.pause();
   }
+})();
+
+/* «Шторка» для заголовков: клип вешаем на внутренний слой.
+   Если повесить clip-path на сам элемент, у него нулевая площадь пересечения
+   и IntersectionObserver его не видит — заголовок остаётся невидимым. */
+(function () {
+  var sel = 'h2.reveal, .heavy.reveal, .script.reveal, .script-lat.reveal, .manifesto__text span.reveal';
+  document.querySelectorAll(sel).forEach(function (el) {
+    if (getComputedStyle(el).display !== 'block') return;
+    var inner = document.createElement('span');
+    inner.className = 'wipe';
+    while (el.firstChild) inner.appendChild(el.firstChild);
+    el.appendChild(inner);
+  });
 })();
 
 /* Появление блоков при скролле */
