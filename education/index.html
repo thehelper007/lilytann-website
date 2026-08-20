@@ -111,6 +111,18 @@
   </div>
 </header>
 
+<!-- ============ ПРОМО-ВИДЕО (зациклено, без звука) ============ -->
+<section class="promo">
+  <div class="wrap">
+    <video class="promo__video" id="promoVideo"
+           autoplay loop muted playsinline preload="metadata"
+           poster="/education/img/promo-poster.webp"
+           aria-label="Самоуважение — практический менторинг-интенсив">
+      <source src="/education/video/promo.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
 <hr class="rule">
 
 <!-- ============ ПОЧЕМУ Я ЭТО ДЕЛАЮ ============ -->
@@ -128,7 +140,6 @@
         <p class="why__answer reveal" style="margin-top:10px">
           на то, что ты хотела задать своему психологу, но ещё не успела
         </p>
-        <img class="reveal" src="/education/img/liliya-white.webp" width="1200" height="900" alt="Лилия Тан" loading="lazy" decoding="async" style="margin-top:clamp(20px,4vw,32px)">
       </div>
     </div>
   </div>
@@ -520,6 +531,18 @@
 
 <script>
 document.documentElement.classList.add('has-js');
+
+/* Если в системе включено «уменьшить анимацию» — не крутим видео само, даём кнопку */
+(function () {
+  var v = document.getElementById('promoVideo');
+  if (!v || !window.matchMedia) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    v.removeAttribute('autoplay');
+    v.loop = false;
+    v.controls = true;
+    v.pause();
+  }
+})();
 
 /* Появление блоков при скролле */
 (function () {

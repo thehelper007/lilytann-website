@@ -232,6 +232,19 @@ a.freebadge:hover { background: var(--pink); color: #000; }
 .hero__prog li:first-child { border-top: 1px solid var(--rule); }
 .hero__actions { margin-top: clamp(22px, 4.5vw, 34px); display: grid; gap: 14px; justify-items: start; }
 
+/* ---------- Промо-видео ---------- */
+
+.promo { padding: clamp(28px, 5.5vw, 56px) 0; }
+.promo__video {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  background: #000;
+  aspect-ratio: 848 / 480;
+  object-fit: cover;
+}
+
 /* ---------- Почему я это делаю ---------- */
 
 .why { display: grid; gap: clamp(24px, 5vw, 46px); }
@@ -243,7 +256,7 @@ a.freebadge:hover { background: var(--pink); color: #000; }
   margin-right: 6px;
 }
 .why p { font-family: var(--f-display); text-transform: uppercase; letter-spacing: .05em; line-height: 1.55; font-size: clamp(.85rem, 2.9vw, .96rem); }
-.why__answer { color: var(--pink); font-size: clamp(1.05rem, 4.4vw, 1.7rem); line-height: 1.25; font-family: var(--f-display); text-transform: uppercase; letter-spacing: .04em; }
+.why .why__answer { color: var(--pink); font-size: clamp(1.05rem, 4.4vw, 1.7rem); line-height: 1.25; font-family: var(--f-display); text-transform: uppercase; letter-spacing: .04em; }
 .bow { font-size: clamp(1.4rem, 5vw, 2rem); line-height: 1; }
 
 /* ---------- Триггеры ---------- */
