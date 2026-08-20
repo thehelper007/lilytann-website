@@ -235,7 +235,7 @@ a.freebadge:hover { background: var(--pink); color: #000; }
 /* ---------- Промо-видео ---------- */
 
 /* Горизонтальный ролик — компактный, по центру, никогда не шире колонки */
-.hero__media { width: min(100%, 130px); min-width: 0; margin-inline: auto; }
+.hero__media { width: min(100%, 162px); min-width: 0; margin-inline: auto; }
 .hero__media { display: flex; justify-content: center; }
 .promo__video {
   display: block;
