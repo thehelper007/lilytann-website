@@ -199,9 +199,16 @@ a.freebadge:hover { background: var(--pink); color: #000; }
   text-transform: uppercase;
   margin-bottom: clamp(10px, 2.4vw, 16px);
 }
-.hero__intro { margin-top: clamp(16px, 3.4vw, 24px); max-width: 40ch; }
+.hero__kicker {
+  max-width: 46ch;
+  margin-bottom: clamp(18px, 3.6vw, 28px);
+  font-size: clamp(.88rem, 2.9vw, 1rem);
+  line-height: 1.6;
+  color: var(--pink-soft);
+}
+.hero__kicker u { color: var(--pink); text-decoration: none; }
 .hero__from {
-  margin-top: 14px;
+  margin-top: clamp(14px, 2.6vw, 20px);
   font-family: var(--f-display);
   text-transform: lowercase;
   letter-spacing: .04em;
@@ -270,7 +277,7 @@ a.freebadge:hover { background: var(--pink); color: #000; }
 
 /* ---------- Намерение ---------- */
 
-.intent__title { font-size: clamp(1.9rem, 8.4vw, 3.6rem); margin: 6px 0 clamp(18px, 4vw, 30px); }
+.intent .intent__title { font-size: clamp(1.9rem, 8.4vw, 3.6rem); margin: 6px 0 clamp(18px, 4vw, 30px); }
 .intent p { font-size: clamp(.9rem, 2.9vw, 1rem); }
 .intent p + p { margin-top: 1.4em; }
 
@@ -446,8 +453,22 @@ a.freebadge:hover { background: var(--pink); color: #000; }
 }
 
 @media (min-width: 861px) {
-  .hero__grid { grid-template-columns: 1fr .92fr; align-items: center; }
-  .hero__posters { order: 2; }
-  .hero__prog { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 46px); align-items: start; }
-  .hero__prog h3 { grid-column: 1 / -1; }
+  /* слева — текст и программа, справа — постеры на всю высоту */
+  .hero__grid {
+    grid-template-columns: 1fr .92fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+    column-gap: clamp(30px, 5vw, 64px);
+  }
+  .hero__grid > div:first-child { grid-column: 1; grid-row: 1; }
+  .hero__posters {
+    grid-column: 2; grid-row: 1 / span 2; align-self: center;
+    display: flex; justify-content: center; align-items: center; gap: 0;
+  }
+  .hero__posters img { width: 46%; }
+  .hero__posters img:nth-child(1) { transform: translateY(26px); z-index: 1; }
+  .hero__posters img:nth-child(2) { margin-left: -9%; z-index: 2; }
+  .hero__posters img:nth-child(3) { margin-left: -9%; transform: translateY(-26px); z-index: 3; }
+  .hero__prog { grid-column: 1; grid-row: 2; margin-top: clamp(18px, 3vw, 30px); }
+  .hero__prog h3 { margin-bottom: 14px; }
 }
